@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Basavaraju M.",
+    "age": 48,
+    "gender": "Male",
+    "village": "Kailancha",
+    "district": "Ramanagara",
+    "state": "Karnataka",
+    "phone": "9876543210",
+    "password": "password123",
+    "blood_group": "B+",
+    "allergies": "Sulfa drugs",
+    "chronic_conditions": "Hypertension (High BP)",
+    "preferred_language": "kn"
+  },
+  {
+    "name": "Sunita Devi",
+    "age": 34,
+    "gender": "Female",
+    "village": "Harohalli",
+    "district": "Ramanagara",
+    "state": "Karnataka",
+    "phone": "9876500001",
+    "password": "password123",
+    "blood_group": "O+",
+    "allergies": "None",
+    "chronic_conditions": "None",
+    "preferred_language": "hi"
+  },
+  {
+    "name": "Murugesan K.",
+    "age": 62,
+    "gender": "Male",
+    "village": "Mathigiri",
+    "district": "Krishnagiri",
+    "state": "Tamil Nadu",
+    "phone": "9876500002",
+    "password": "password123",
+    "blood_group": "A+",
+    "allergies": "Dust, Penicillin",
+    "chronic_conditions": "Type 2 Diabetes",
+    "preferred_language": "ta"
+  }
+]

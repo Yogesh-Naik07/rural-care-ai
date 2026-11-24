@@ -1,0 +1,378 @@
+/*
+ * RuralCare AI - Styling & Design System
+ * Clean, modern, accessible healthcare theme tailored for rural communities.
+ */
+
+:root {
+    --primary-color: #0284c7;        /* Medical Sky Blue */
+    --primary-dark: #0369a1;
+    --primary-light: #e0f2fe;
+    --secondary-color: #0d9488;      /* Teal Health Accent */
+    --accent-emerald: #059669;       /* Low Risk Green */
+    --accent-amber: #d97706;         /* Moderate Risk Amber */
+    --accent-crimson: #dc2626;       /* Emergency Red */
+    --bg-light: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Accessibility & Big Touch Targets */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 12px 20px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* Navbar */
+.navbar {
+    background: #ffffff;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary-dark) !important;
+    font-size: 1.35rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--text-muted) !important;
+    padding: 8px 16px !important;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+    background-color: var(--primary-light);
+}
+
+/* Language Switcher Bar */
+.lang-bar {
+    background-color: #f1f5f9;
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px 0;
+}
+
+.lang-btn {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    min-height: 34px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #334155;
+}
+
+.lang-btn:hover, .lang-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+/* Top Disclaimer Banner */
+.disclaimer-banner {
+    background-color: #fef3c7;
+    border-bottom: 1px solid #fde68a;
+    color: #92400e;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 6px 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+    padding: 50px 0 40px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #0c4a6e;
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #475569;
+    max-width: 680px;
+}
+
+/* Cards & Components */
+.card {
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card {
+    border-top: 4px solid var(--primary-color);
+}
+
+/* Symptom Quick Chips */
+.symptom-chip {
+    display: inline-block;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 24px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.symptom-chip:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+    color: var(--primary-dark);
+}
+
+.symptom-chip.chip-emergency {
+    border-color: #fca5a5;
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.symptom-chip.chip-emergency:hover {
+    background: #fee2e2;
+}
+
+/* Voice Recording Visualizer */
+.voice-record-btn {
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    background: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.voice-record-btn.recording {
+    background-color: #fee2e2;
+    border-color: var(--accent-crimson);
+    color: var(--accent-crimson);
+    animation: mic-pulse 1.5s infinite;
+}
+
+@keyframes mic-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 16px rgba(220, 38, 38, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+    }
+}
+
+.voice-pulse-ring {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-crimson);
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* Emergency Red Alert Box */
+.emergency-alert-card {
+    background: linear-gradient(135deg, #fee2e2 0%, #fef2f2 100%);
+    border: 3px solid var(--accent-crimson);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+}
+
+.emergency-btn-call {
+    background-color: var(--accent-crimson);
+    border-color: var(--accent-crimson);
+    color: #ffffff;
+    font-size: 1.25rem;
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+    animation: urgent-pulse 1.8s infinite;
+}
+
+@keyframes urgent-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+/* Custom Option Pills in Followups */
+.custom-option-pill {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 16px 12px 38px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.custom-option-pill:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.custom-option-pill input:checked + label {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Doctor Finder Map */
+#doctorMapContainer {
+    height: 380px;
+    width: 100%;
+    border-radius: 14px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Floating SOS Button */
+.floating-sos-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1050;
+    background-color: var(--accent-crimson);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 14px 22px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.45);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    animation: urgent-pulse 2s infinite;
+}
+
+.floating-sos-btn:hover {
+    color: #ffffff;
+    background-color: #b91c1c;
+}
+
+/* Loading Spinner */
+.spinner-lg {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    border-top: 1px solid #1e293b;
+    padding: 40px 0 25px;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .floating-sos-btn {
+        bottom: 16px;
+        right: 16px;
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+    #doctorMapContainer {
+        height: 280px;
+    }
+}
+
+@media print {
+    .navbar, .lang-bar, .disclaimer-banner, footer, .floating-sos-btn, .btn {
+        display: none !important;
+    }
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+}
